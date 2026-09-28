@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101722">
+  <meta name="description" content="The Gondor Sorting Hat reveals your gloriously questionable fantasy destiny.">
+  <title>Gondor Sorting Hat</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Gondor Sorting Hat home"><span class="brand-symbol" aria-hidden="true">✦</span> GONDOR <span class="brand-light">SORTING HAT</span></a>
+      <div class="header-note">Gondor Calls For Raid <span aria-hidden="true">✳</span> All Rights Reserved</div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> WHO WILL YOU BE FOREVER</div>
+          <h1 id="page-title">Find your <em>fate.</em><br><span>The sorting hat knows best.</span></h1>
+          <p class="intro">Present yourself for sorting and meet the hero you probably deserve.</p>
+
+          <form id="sort-form" class="sort-card" novalidate>
+            <div class="card-title"><span class="seal" aria-hidden="true">✧</span><div><span class="kicker">Sorting Hat:</span><h2>Who dares approach?</h2></div></div>
+            <div class="fields">
+              <label for="first-name">FIRST NAME<input id="first-name" name="firstName" type="text" autocomplete="given-name" maxlength="80" placeholder="e.g. John" required></label>
+              <label for="last-name">LAST NAME<input id="last-name" name="lastName" type="text" autocomplete="family-name" maxlength="80" placeholder="e.g. Warcraft" required></label>
+            </div>
+            <p id="form-error" class="form-error" role="alert" hidden></p>
+            <button id="sort-button" class="sort-button" type="submit"><span id="button-label">SORT MY DESTINY</span><span class="button-spark" aria-hidden="true">✧</span></button>
+            <p class="card-footnote">All names are sold to Flock, Palantir, OpenAI and Blizzerd.</p>
+          </form>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-crest" aria-hidden="true">✦</div>
+          <div id="mascot" class="mascot" role="img" aria-label="A yelling fantasy face wearing a tall blue sorting hat">
+            <div class="mascot-halo"></div>
+            <img class="mascot-face" src="./assets/yelling-face.png" alt="" width="1240" height="1240">
+            <img class="mascot-hat" src="./assets/blue-hat.png" alt="" width="1240" height="1240">
+            <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span><span class="spark spark-three">✹</span><span class="spark spark-four">✦</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="result" class="result-section" aria-labelledby="result-heading" hidden>
+        <div class="result-heading-row"><span class="result-index">01 / DESTINY REVEALED</span><span class="result-star" aria-hidden="true">✦ ✧ ✦</span></div>
+        <div class="result-layout">
+          <div class="result-art-frame"><div class="art-sun" aria-hidden="true"></div><div id="result-art" class="result-art"></div></div>
+          <div class="result-copy"><span class="result-overline">THE HAT HAS SPOKEN</span><h2 id="result-heading">A hero emerges</h2>
+            <dl id="result-stats" class="result-stats" hidden>
+              <dt>Body Type</dt><dd id="stat-body-type"></dd>
+              <dt>Height</dt><dd id="stat-height"></dd>
+              <dt>Weight</dt><dd id="stat-weight"></dd>
+              <dt>Girth</dt><dd id="stat-girth"></dd>
+              <dt id="stat-anatomy-label"></dt><dd id="stat-anatomy"></dd>
+              <dt>Shoe Size</dt><dd id="stat-shoe-size"></dd>
+            </dl>
+            <p id="result-description" class="result-description" hidden></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>✦ GONDOR SORTING HAT</span><span>For feedback please DM Pike</span></footer>
+  </div>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
